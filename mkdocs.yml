@@ -1,0 +1,40 @@
+site_name: Withings API Integration
+site_url:
+theme:
+  name: material
+  palette:
+    scheme: slate
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.instant
+    - content.code.copy
+    - content.code.select
+nav:
+  - Home: index.md
+  - Configuration:
+      - App Creation: app_creation.md
+      - Environment Variables: env_vars.md
+      - Secrets Management: secrets.md
+  - API Reference: api.md
+  - Usage: usage.md
+  - CLI Tool: cli.md
+markdown_extensions:
+  - admonition
+  - codehilite
+  - toc:
+      permalink: true
+  - pymdownx.superfences
+  - pymdownx.tabbed
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - attr_list
+  - md_in_html
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
