@@ -24,16 +24,6 @@ theme:
     - search.suggest
     - search.highlight
     - search.share
-nav:
-  - Home: index.md
-  - Setup:
-      - Withings App Creation: setup/app_creation.md
-      - Authorization: setup/authorize.md
-  - Usage: usage.md
-  - CLI Tool: cli.md
-  - Reference:
-      - WithingsAPIClient: ref/client.md
-      - Models: ref/models.md
 plugins:
   - git-revision-date-localized:
       enable_creation_date: true
@@ -47,6 +37,7 @@ plugins:
       default_handler: python
       handlers:
         python:
+          paths: [src]
           load_external_modules: true
           options:
             docstring_section_style: table
@@ -74,3 +65,13 @@ markdown_extensions:
   - def_list
   - pymdownx.tasklist:
       custom_checkbox: true
+nav:
+  - Home: index.md
+  - Setup:
+      - Withings App Creation: setup/app_creation.md
+      - Authorization: setup/authorize.md
+  - Usage: usage.md
+  - CLI Tool: cli.md
+  - Reference:
+      - WithingsAPIClient: ref/client.md
+      - Models: ref/models.md
