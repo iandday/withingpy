@@ -6,12 +6,21 @@ readme = "README.md"
 authors = [
     { name = "Ian Day", email = "ian@ianday.me" }
 ]
+license = "GPL-3.0-or-later"
 requires-python = ">=3.12"
 dependencies = [
     "pydantic>=2.11.5",
     "requests>=2.32.3",
     "typer>=0.15.4",
 ]
+
+[project.urls]
+Homepage = "https://iandday.github.io/withingpy/"
+Documentation = "https://iandday.github.io/withingpy/"
+Repository = "https://github.com/iandday/withingpy"
+Issues = "https://github.com/iandday/withingpy/issues"
+Changelog = "https://github.com/iandday/withingpy/master/CHANGELOG.md"
+
 [dependency-groups]
 dev = [
     "ruff>=0.11.12",
@@ -31,6 +40,7 @@ doc = [
   "mkdocs-typer2>=0.1.4",
   "mkdocstrings[python] (>=0.26,<0.27)",
 ]
+
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
