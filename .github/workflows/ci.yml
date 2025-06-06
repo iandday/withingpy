@@ -59,5 +59,8 @@ jobs:
       with:
         python-version-file: ".python-version"
         
-    - name: Build a binary wheel and a source tarball
+    - name: Build
+      run: uv build
+
+    - name: Publish to PyPI Test
       run: uv publish --index testpypi
