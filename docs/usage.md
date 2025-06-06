@@ -3,13 +3,14 @@
 ```python
 import json
 from pathlib import Path
+from pydantic.tools import parse_obj_as
 
 from withingpy import WithingsAPIClient
 from withingpy.models import WithingsConfig
 
 # load config and create client
 config_path = Path("withings_config.json")
-config = WithingsConfig(**json.loads(config_path.read_text()))
+config = parse_obj_as(WithingsConfig, json.loads(config_path.read_text()))
 client = WithingsAPIClient(config)
 
 # refresh token and save config
