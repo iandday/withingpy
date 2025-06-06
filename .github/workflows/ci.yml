@@ -60,6 +60,9 @@ jobs:
       with:
         python-version-file: ".python-version"
 
+    - name: Cleanup Old Builds
+      run: rm -rf dist/*
+
     - name: Build
       run: uv build
 
