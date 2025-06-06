@@ -42,6 +42,7 @@ jobs:
     name: Publish to PyPI Test
     if: github.ref != 'refs/heads/main'
     runs-on: ubuntu-latest
+    environment: dev
     permissions:
       id-token: write
     steps:
@@ -58,7 +59,7 @@ jobs:
       uses: actions/setup-python@v5
       with:
         python-version-file: ".python-version"
-        
+
     - name: Build
       run: uv build
 
