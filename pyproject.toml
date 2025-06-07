@@ -1,13 +1,18 @@
 [project]
 name = "withingpy"
-version = "0.1.1"
+version = "0.1.2"
 description = "Withings Public API Integration"
 readme = "README.md"
 authors = [
     { name = "Ian Day", email = "ian@ianday.me" }
 ]
-license = "GPL-3.0-or-later"
+license = { text="GPL-3.0-or-later" }
 requires-python = ">=3.12"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+]
 dependencies = [
     "pydantic>=2.11.5",
     "requests>=2.32.3",
