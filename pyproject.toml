@@ -32,6 +32,7 @@ Changelog = "https://github.com/iandday/withingpy/master/CHANGELOG.md"
 
 [dependency-groups]
 dev = [
+    "python-semantic-release>=10.0.2",
     "ruff>=0.11.12",
 ]
 doc = [
@@ -108,3 +109,25 @@ include = "H008,H009,H010,H014,H024,H026,H033,T028,T034"
 
 # Ignore troublesome rules that aren't auto-fixable or causing issues
 ignore = "D004,D018,H005,H006,H007,H011,H012,H013,H015,H016,H017,H019,H020,H021,H022,H023,H025,H029,H030,H031,H035,H036,H037,J004,J018,T001,T002,T003,T027,T032"
+
+[tool.semantic_release]
+version_toml = ["pyproject.toml:project.version"]
+build_command = "uv build"
+commit_parser = "conventional"
+
+[tool.semantic_release.changelog.default_templates]
+changelog_file = "docs/CHANGELOG.md"
+output_format = "md"
+
+[tool.semantic_release.commit_parser_options]
+minor_tags = ["feat"]
+patch_tags = ["fix", "perf"]
+parse_squash_commits = true
+ignore_merge_commits = true
+
+
+[tool.semantic_release.branches.alpha]
+# Matches branches with the prefixes 'feat/', 'fix/', or 'perf/'.
+match = "^(feat|fix|perf)/.+"
+prerelease = true
+prerelease_token = "alpha"
