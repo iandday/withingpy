@@ -1,5 +1,7 @@
 # Usage
 
+Load configuration data from a JSON file, refresh tokens, save config data, get all available measures in freedom units and save to a JSON file.
+
 ```python
 import json
 from pathlib import Path

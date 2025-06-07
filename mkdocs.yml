@@ -75,3 +75,4 @@ nav:
   - Reference:
       - WithingsAPIClient: ref/client.md
       - Models: ref/models.md
+  - Changelog: changelog.md
