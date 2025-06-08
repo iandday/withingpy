@@ -2,6 +2,14 @@
 
 <!-- version list -->
 
+## v1.0.3 (2025-06-08)
+
+### Bug Fixes
+
+- **CI**: Use pypi action
+  ([`4dc9623`](https://github.com/iandday/withingpy/commit/4dc9623c654542080c1fa7a57380a9e2cf0efced))
+
+
 ## v1.0.2 (2025-06-08)
 
 ### Bug Fixes
