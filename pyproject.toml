@@ -121,7 +121,4 @@ ignore_merge_commits = true
 
 
 [tool.semantic_release.branches.alpha]
-# Matches branches with the prefixes 'feat/', 'fix/', or 'perf/'.
-match = "^(feat|fix|perf)/.+"
-prerelease = true
-prerelease_token = "alpha"
+prerelease = false
