@@ -2,6 +2,14 @@
 
 <!-- version list -->
 
+## v1.0.4 (2025-06-08)
+
+### Bug Fixes
+
+- **CI**: Update pypi release version
+  ([`99a5cb2`](https://github.com/iandday/withingpy/commit/99a5cb2bfbd1e05696f8d1c0ce21d1e8e00c3772))
+
+
 ## v1.0.3 (2025-06-08)
 
 ### Bug Fixes
