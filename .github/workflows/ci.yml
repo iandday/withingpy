@@ -147,6 +147,6 @@ jobs:
           path: dist
 
       - name: Publish | Publish to PyPI
-        uses: pypa/gh-action-pypi-publish@release/v1.12.4
+        uses: pypa/gh-action-pypi-publish@release/v1.12
 
 
