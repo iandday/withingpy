@@ -2,6 +2,14 @@
 
 <!-- version list -->
 
+## v1.0.2 (2025-06-08)
+
+### Bug Fixes
+
+- **CI**: Fix job output variable
+  ([`e3ad6bc`](https://github.com/iandday/withingpy/commit/e3ad6bc2b14fc2f504698f842c0a3a1bf1814306))
+
+
 ## v1.0.1 (2025-06-08)
 
 ### Bug Fixes
