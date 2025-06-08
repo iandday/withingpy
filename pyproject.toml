@@ -106,7 +106,7 @@ ignore = "D004,D018,H005,H006,H007,H011,H012,H013,H015,H016,H017,H019,H020,H021,
 
 [tool.semantic_release]
 version_toml = ["pyproject.toml:project.version"]
-build_command = "uv build"
+build_command = "pip install uv && uv build"
 commit_parser = "conventional"
 
 [tool.semantic_release.changelog.default_templates]
