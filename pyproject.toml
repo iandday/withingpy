@@ -1,19 +1,38 @@
 [project]
 name = "withingpy"
-version = "0.1.0"
+version = "1.0.0-alpha.1"
 description = "Withings Public API Integration"
 readme = "README.md"
 authors = [
     { name = "Ian Day", email = "ian@ianday.me" }
 ]
+license = { text="GPL-3.0-or-later" }
 requires-python = ">=3.12"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Developers",
+    "Development Status :: 4 - Beta"
+]
 dependencies = [
     "pydantic>=2.11.5",
     "requests>=2.32.3",
     "typer>=0.15.4",
 ]
+
+[project.urls]
+Homepage = "https://iandday.github.io/withingpy/"
+Documentation = "https://iandday.github.io/withingpy/"
+Repository = "https://github.com/iandday/withingpy"
+Issues = "https://github.com/iandday/withingpy/issues"
+Changelog = "https://github.com/iandday/withingpy/master/CHANGELOG.md"
+
 [dependency-groups]
 dev = [
+    "python-semantic-release>=10.0.2",
     "ruff>=0.11.12",
 ]
 doc = [
@@ -31,18 +50,13 @@ doc = [
   "mkdocs-typer2>=0.1.4",
   "mkdocstrings[python] (>=0.26,<0.27)",
 ]
+
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project.scripts]
 withings-cli = "withingpy.cli:app"
-
-[[tool.uv.index]]
-name = "testpypi"
-url = "https://test.pypi.org/simple/"
-publish-url = "https://test.pypi.org/legacy/"
-explicit = true
 
 [tool.ruff]
 line-length = 145
@@ -89,3 +103,25 @@ include = "H008,H009,H010,H014,H024,H026,H033,T028,T034"
 
 # Ignore troublesome rules that aren't auto-fixable or causing issues
 ignore = "D004,D018,H005,H006,H007,H011,H012,H013,H015,H016,H017,H019,H020,H021,H022,H023,H025,H029,H030,H031,H035,H036,H037,J004,J018,T001,T002,T003,T027,T032"
+
+[tool.semantic_release]
+version_toml = ["pyproject.toml:project.version"]
+build_command = "uv build"
+commit_parser = "conventional"
+
+[tool.semantic_release.changelog.default_templates]
+changelog_file = "docs/CHANGELOG.md"
+output_format = "md"
+
+[tool.semantic_release.commit_parser_options]
+minor_tags = ["feat"]
+patch_tags = ["fix", "perf"]
+parse_squash_commits = true
+ignore_merge_commits = true
+
+
+[tool.semantic_release.branches.alpha]
+# Matches branches with the prefixes 'feat/', 'fix/', or 'perf/'.
+match = "^(feat|fix|perf)/.+"
+prerelease = true
+prerelease_token = "alpha"
