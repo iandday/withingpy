@@ -1,6 +1,6 @@
 [project]
 name = "withingpy"
-version = "1.0.4"
+version = "1.0.5"
 description = "Withings Public API Integration"
 readme = "README.md"
 authors = [

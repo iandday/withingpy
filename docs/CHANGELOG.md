@@ -2,6 +2,14 @@
 
 <!-- version list -->
 
+## v1.0.5 (2025-06-08)
+
+### Bug Fixes
+
+- **CI**: Fix environment name
+  ([`19693bd`](https://github.com/iandday/withingpy/commit/19693bd9eac75a01ee2417d9be2b20d2103da734))
+
+
 ## v1.0.4 (2025-06-08)
 
 ### Bug Fixes
