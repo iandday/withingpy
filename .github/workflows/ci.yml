@@ -131,7 +131,9 @@ jobs:
     runs-on: ubuntu-latest
     needs: release
     if: ${{ needs.release.outputs.released == 'true' }}
-
+    environment:
+      name: pypi
+      url: https://pypi.org/p/withingpy
     permissions:
       contents: read
       id-token: write
@@ -144,16 +146,7 @@ jobs:
           name: distribution-artifacts
           path: dist
 
-      - name: Install uv
-        uses: astral-sh/setup-uv@v5
-        with:
-          enable-cache: true
-          cache-dependency-glob: "uv.lock"
+      - name: Publish | Publish to PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1.12.4
 
-      - name: "Set up Python"
-        uses: actions/setup-python@v5
-        with:
-          python-version-file: ".python-version"
 
-      - name: Publish to PyPI
-        run: uv publish
