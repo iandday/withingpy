@@ -60,6 +60,17 @@ jobs:
         run: |
           git reset --hard ${{ github.sha }}
 
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+          cache-dependency-glob: "uv.lock"
+
+      - name: "Set up Python"
+        uses: actions/setup-python@v5
+        with:
+          python-version-file: ".python-version"
+
       - name: Evaluate | Verify upstream has NOT changed
         shell: bash
         run: |
@@ -142,5 +153,5 @@ jobs:
         with:
           python-version-file: ".python-version"
 
-      - name: Publish to PyPI Test
-        run: uv publish --index testpypi
+      - name: Publish to PyPI
+        run: uv publish
