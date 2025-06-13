@@ -2,6 +2,14 @@
 
 <!-- version list -->
 
+## v1.0.7 (2025-06-13)
+
+### Bug Fixes
+
+- **CI**: :ambulance: update trusted publisher settings
+  ([`5b98a3d`](https://github.com/iandday/withingpy/commit/5b98a3d787d24ef004eb5128cc02af76e1eb45ad))
+
+
 ## v1.0.6 (2025-06-13)
 
 ### Bug Fixes
