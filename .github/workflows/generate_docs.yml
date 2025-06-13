@@ -3,8 +3,6 @@ on:
   push:
     tags:
       - '*'
-    branches:
-      - main
 permissions:
   contents: read
 jobs:
@@ -13,6 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       pages: write
+      contents: write
     steps:
       - name: checkout
         uses: actions/checkout@v4
