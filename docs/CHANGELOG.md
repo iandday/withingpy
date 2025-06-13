@@ -2,6 +2,14 @@
 
 <!-- version list -->
 
+## v1.0.8 (2025-06-13)
+
+### Bug Fixes
+
+- **CI**: :bug: remove criteria
+  ([`6bf8fe7`](https://github.com/iandday/withingpy/commit/6bf8fe73f529ceea26acdc4d6701291a0c3ebf05))
+
+
 ## v1.0.7 (2025-06-13)
 
 ### Bug Fixes
