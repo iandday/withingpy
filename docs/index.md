@@ -4,7 +4,7 @@ Welcome to the Withings API Integration documentation.
 
 
 <p align="center">
-  <img src="docs/img/logo.svg" alt="Withings Logo" width="200"/>
+  <img src="img/logo.svg" alt="Withings Logo" width="200"/>
 </p>
 
 ## Supported Measurements
