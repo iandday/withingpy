@@ -2,6 +2,14 @@
 
 <!-- version list -->
 
+## v1.0.6 (2025-06-13)
+
+### Bug Fixes
+
+- **CI**: :rocket: break out actions
+  ([`204e242`](https://github.com/iandday/withingpy/commit/204e242764bdbfc8fdb6154f5cecceb43b852929))
+
+
 ## v1.0.5 (2025-06-08)
 
 ### Bug Fixes
