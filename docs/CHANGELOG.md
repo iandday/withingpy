@@ -2,6 +2,14 @@
 
 <!-- version list -->
 
+## v1.0.9 (2025-06-13)
+
+### Bug Fixes
+
+- **CI**: :bug: push logic
+  ([`56a8d49`](https://github.com/iandday/withingpy/commit/56a8d497b565c5b8ceff1016a6da1b97fb4f8be9))
+
+
 ## v1.0.8 (2025-06-13)
 
 ### Bug Fixes
